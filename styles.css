@@ -1,29 +1,33 @@
 .subsection-head {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 10px;
     color: #7f0909;
 }
-.header {
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     padding-top: 5%;
 }
+
 #header-left {
 }
+
 #header-right {
 }
+
 #header-image {
+padding-top: 5%;
 margin-left: 30%;
 margin-right: 30%;
 width: 0%;
 }
 
-.header-button {background-color: blueviolet;  
-}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -58,6 +62,10 @@ a:active {
     color: red;
 }
 
+#link-spacing {
+    margin-bottom: 5%;
+}
+
 
 /*** VSCodeEDU preview fix 
 
@@ -84,50 +92,6 @@ html {
   - [ ] Any time after
 ***/
 
-body {
-    /* Add a background color or image */
-    background-color: var(--bg-color); /* see bottom of file for color variables */
-
-    /* Customize the default size, color, and font for text*/
-    font-size: 16px;
-    color: var(--text-color);
-    font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
-
-    /* Put space around the edges of the webpage */
-    margin: 50px;
-}
-
-/*** Text ***
-  
-  Purpose: 
-  - Add style rules for headings (h1-6),
-    paragraphs (p), links (a), and buttons
-
-  When To Modify:
-  - [X] Project 3 (REQUIRED FEATURE) 
-  - [ ] Any time after
-***/
-
-h1 {
-    
-}
-
-h2 {
-    
-}
-
-h3 {
-    
-}
-
-h4 {
-    
-}
-
-p {
-    
-}
-
 a,
 a * {
     
@@ -135,7 +99,7 @@ a * {
 
 button {
     /* Example Style, replace with your own! */
-    background-color: green;    /* button color */
+    background-color: blueviolet;    /* button color */
     color: white;               /* text color */
     border: none;               /* hides the default border */
     padding: 5px 12px;          /* space between button's text and edge */
@@ -147,20 +111,8 @@ button:hover {
     /* Make the button look different when the user hovers over it */
 }
 
-/*** header ***
-  
-  Purpose:
-  - Add style rules for your website's header section
 
-  When To Modify:
-  - [X] Project 3 (REQUIRED FEATURE) 
-  - [ ] Project 4 (REQUIRED FEATURE) 
-  - [ ] Any time after
-***/
-
-.header { /* Example A: This styles elements with class="header" */
     
-}
 
 /*** footer ***
   
@@ -172,46 +124,35 @@ button:hover {
   - [ ] Any time after
 ***/
 
-.footer { /* Example B: This styles elements with class="footer" */
+.footer { 
+  background-color: blueviolet;
+  color:black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 10%;
     
 }
 
-/*** Navbar [PLACEHOLDER] [ADDED IN UNIT 4] ***/
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+    
+}
 
-/*** About Section ***
-  
-  Purpose:
-  - Add style rules for your website's About section
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
 
-  When To Modify:
-  - [ ] Project 3 (OPTIONAL)
-  - [ ] Project 4 (STRETCH FEATURE) 
-  - [ ] Any time after
-***/
+.navbar ul li a {
+    
+}
 
+.navbar ul li a:hover {
+    
+}
 
-/*** Schedule Section ***
-  
-  Purpose:
-  - Add style rules for your website's Schedule section
-
-  When To Modify:
-  - [ ] Project 3 (OPTIONAL)
-  - [ ] Project 4 (STRETCH FEATURE) 
-  - [ ] Any time after
-***/
-
-
-/*** Links Section ***
-  
-  Purpose:
-  - Add style rules for your website's Links section
-
-  When To Modify:
-  - [ ] Project 3 (OPTIONAL)
-  - [ ] Project 4 (STRETCH FEATURE) 
-  - [ ] Any time after
-***/
 
 
 /*** RSVP [PLACEHOLDER] [ADDED IN UNIT 6] ***/
