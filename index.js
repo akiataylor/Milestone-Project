@@ -41,7 +41,7 @@ rsvpForm.addEventListener("submit", function(event) {
 // Validation
 let valid = true;
 
-// Name must be 2+ characters
+// Name must be 2+ character
 if (nameInput.value.trim().length < 2) { 
   nameInput.classList.add("error"); 
   valid = false; 
