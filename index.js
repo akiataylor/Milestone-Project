@@ -35,13 +35,13 @@ rsvpForm.addEventListener("submit", function(event) {
   const stateInput = document.getElementById("state-input");
   const emailInput = document.getElementById("email-input");
 
-  // Reset previous error highlights
+  // Reset previous error highlight
   [nameInput, stateInput, emailInput].forEach(input => input.classList.remove("error"));
 
 // Validation
 let valid = true;
 
-// Name must be 2+ character
+// Name must be 2+ characters
 if (nameInput.value.trim().length < 2) { 
   nameInput.classList.add("error"); 
   valid = false; 
