@@ -225,7 +225,7 @@ input {
   font-size: 4em;
   font-family: 'Georgia', serif;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 20px 10px;
   padding: 100px 20px;
 
   background-image: 
@@ -297,3 +297,50 @@ input {
   border: 1px solid #ff0000; /* bright red */
 }
 
+/* ==============================
+   IMAGE STYLING (center & responsive)
+=================================*/
+img {
+  display: block;      /* makes margin auto work */
+  margin: 0 auto;      /* center horizontally */
+  max-width: 100%;     /* responsive: never overflow container */
+  height: auto;        /* preserve aspect ratio */
+}
+
+/* optional: center images inside figures and text blocks */
+figure {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Center iframe without changing size */
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+/*** Animations  ***
+  
+  Purpose:
+  - Add style rules to enable scroll animations for your website
+
+  When To Modify:
+  - [ ] Project 8 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.revealable {
+  --reveal-distance: 150px; /* Size that fits your website */
+
+  scroll-margin-top: var(--reveal-distance);
+  opacity: 0;
+  transition: all 2s ease;
+  position: relative;
+  transform: translateY(var(--reveal-distance));
+}
+
+.active {
+  scroll-margin-top: 0;
+  transform: translateY(0);
+  opacity: 1;
+}
