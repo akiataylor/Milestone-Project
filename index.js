@@ -27,6 +27,34 @@ const rsvpForm = document.getElementById("rsvp-form");
 const participantsDiv = document.querySelector(".rsvp-participants");
 let count = 3; // initial RSVP count
 
+
+const toggleModal = (person) => {
+    const modal = document.getElementById("success-modal");
+    const modalContent = document.getElementById("modal-text");
+
+    // TODO: Update modal display to flex
+    modal.style.display = "flex";
+  
+    // TODO: Update modal text to personalized message
+modalContent.textContent = `Thanks for RSVPing, ${person.name}! We can't wait to see you at the event!`;
+
+    // Set modal timeout to 5 seconds
+    setTimeout(() => {
+  modal.style.display = "none";
+}, 5000);
+    
+}
+const closeModalBtn = document.getElementById("close-modal-btn");
+const closeModal = () => {
+    const modal = document.getElementById("success-modal");
+    modal.style.display = "none";
+};
+closeModalBtn.addEventListener("click", closeModal);
+
+
+
+// TODO: animation variables and animateImage() function
+
 // Validation function - creates person object and validates form
 const validateForm = () => {
   let containsErrors = false;
@@ -39,7 +67,7 @@ const validateForm = () => {
     hometown: rsvpInputs[1].value,    // state-input
     email: rsvpInputs[2].value        // email-input
   }
-
+   
   // Reset previous error highlights
   const nameInput = document.getElementById("name-input");
   const stateInput = document.getElementById("state-input");
@@ -68,6 +96,7 @@ const validateForm = () => {
   if (containsErrors) return null; // return null if validation fails
 
   return person; // return the person object if valid
+  
 }
 
 // Form submission handling
@@ -88,6 +117,10 @@ rsvpForm.addEventListener("submit", function(event) {
   count++;
   const countEl = document.getElementById("rsvp-count");
   if (countEl) countEl.textContent = `⭐ ${count} people have RSVP'd to this event!`;
+
+  // ✅ Show personalized modal
+  toggleModal(person);
+
 
   // Reset form
   rsvpForm.reset();
