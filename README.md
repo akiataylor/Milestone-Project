@@ -1,2 +1,2 @@
-[Configuration Demo](https://i.imgur.com/0KyFZ2x.gif)
+[Configuration Demo](https://i.imgur.com/9NZlgf8.gif)
 
